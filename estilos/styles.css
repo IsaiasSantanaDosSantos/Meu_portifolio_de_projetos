@@ -1,0 +1,352 @@
+/*Padrão*/
+* { /*Fontes*/
+    font-family: 'Lato', sans-serif;
+}
+
+/*Cor do fundo*/
+.bg-primary-color {
+    background-color: #fff;
+}
+
+.bg-secondary-color {
+    background-color: #ece8ea;
+}
+
+.bg-dark-color {
+    background-color: #050505;
+}
+
+/*Cor de fontes*/
+.primary-color {
+    color: #050505;
+}
+
+.secondary-color {
+    color: #7a7a7a;
+}
+
+/*NAVBAR*/
+#navbar {
+    border-bottom: 1px solid #7a7a7a; /*Borda inferior*/
+}
+
+#navbar a:hover { /*Quando passar o mouse*/
+    color: #7a7a7a;
+}
+
+
+#navbar a.active { /*Bordar no link que tiver active*/
+    border-bottom: 1px solid #050505; 
+}
+
+.navbar-brand {
+    display: flex; /*Para deixar um ao lado do outro*/  
+}
+
+.navbar-brand img {
+    width: 40px; /*Largura imagem*/
+}
+
+.navbar-brand span { /*Título*/
+    font-weight: 700; /*Tipo fonte*/
+    font-size: 1.5em; /*Tamanho fonte*/
+    margin-left: 0.5em; /*Margem externa esquerda*/
+}
+
+#navbar-items .navbar-nav { /*Barra navegação e links*/
+    display: flex; /*Para ficar lado a lado*/
+    justify-content: center; /*Centralizar itens*/
+    width: 100%; /*Largura total do ttítulo a lateral direita*/
+}
+
+#navbar-items .nav-item { /*Links barra navegação*/
+   margin: 0em 1em; /*Margem externa laterais*/
+}
+
+/* SLIDER */
+#slider {
+    margin-top: 8em;
+    margin-bottom: 1em;
+}
+
+#slider .carousel-caption {
+    bottom: 3em;
+}
+
+#slider .carousel-caption h5 {
+    font-size: 2.5em;
+    text-shadow:  2px 2px #050505;
+}
+
+.btn {
+    border-radius: 0;
+}
+
+#slider .btn {
+    padding: 0.3 0.8em;
+    font-size: 1em;
+    margin-top: 1em;
+}
+
+.carousel-control-prev i,
+.carousel-control-next i {
+    color: #111;
+    font-size: 3em;
+}
+
+.carousel-indicators [data-bs-target] { /*Indicadores*/
+    background-color: #222;
+    opacity: 0.8;
+}
+ 
+.carousel-indicators .active{ /*Se estiver ativo*/
+    background-color: #000;
+}
+
+@media (min-width: 768px) {
+    #slider .carousel-caption {
+        bottom: 15em;
+    }
+
+    #slider .carousel-caption h5 {
+        font-size: 4em;
+        text-shadow: #000 2px 3px;
+    }
+
+    #slider .btn {
+        padding: 0.6 1.6em;
+        font-size: 1.2em;
+    }
+
+    .carousel-indicators {
+        bottom: 7em;
+        
+    }
+}
+
+/* MINI BANNERS*/
+#mini-banners {
+    margin-bottom: 4em;
+}
+
+#mini-banners img {
+    height: 100px; /*Altura das imagens*/
+}
+
+#mini-banners .card {
+    padding: 2em 0.3em;
+    border-radius: 0px;
+    height: 90%;
+
+    display: flex; /*Para centralizar melhor os itens*/
+    justify-content: center; /*Esse parâmetro com o 'justify-content: center'juntamente com o 'display: flex;* centraliza o conteúdo desejado*/
+    align-items: center;
+    flex-direction: column; /*Layout colunas (Colocar um por baixo do outro)*/
+}
+
+#mini-banners i {
+    font-size: 1.5em;
+}
+
+
+/* Eu retirei o título
+#mini-banners .card-title {
+     margin-bottom: 1.5em;
+}
+*/
+
+#mini-banners .btn {
+    margin-bottom: 1em;
+    padding: 0.6em 1.2em;
+    
+}
+
+@media (min-width: 768px) {
+    #mini-banners {
+        margin-top: -9em;
+    }
+
+}
+
+/* DESTAQUES */
+
+#featured-container {
+    margin-bottom: 4em;
+}
+
+
+
+.title {
+    font-size: 1.75em;
+    margin-bottom: .4em;
+    position: relative;
+}
+
+.title:before {
+    width: 90px;
+    border-top: 4px solid #7a7a7a;
+    content: '';
+    position: absolute;
+    bottom: 2em;
+}
+
+#featured-images {
+    margin-top: 2em;
+}
+
+#featured-images img {
+    height: 100%;
+}
+
+#featured-images .col-md-4 {
+    position: relative;
+    cursor: pointer;
+}
+
+#featured-images .col-md-4:hover > .banner-content {
+   opacity: 0.9;
+}
+
+#featured-images .banner-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 99%;
+    background-color: #fff;
+    display: flex; /*Para centralizar melhor os itens*/
+    justify-content: center; /*Esse parâmetro com o 'justify-content: center'juntamente com o 'display: flex;* centraliza o conteúdo desejado*/
+    align-items: center;
+    flex-direction: column; /*Layout colunas (Colocar um por baixo do outro)*/
+    opacity: 0.6;
+    transition: 0.5s; /* Tempode de modança*/
+}
+
+@media (min-width: 768px) {
+    .title {
+        font-size: 2.4em;
+    }
+
+    .title:before {
+        bottom: 1.5em;
+    }
+
+    #featured-images .banner-content {
+        opacity: 0;
+    }
+}
+
+/* INFORMAÇÕES */
+#info-content{
+    margin-bottom: 4em;
+    padding: 4em 1em;
+}
+
+#info-numbers {
+    margin: 1.5em 0;
+}
+
+#info-banner {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2.5em;
+}
+
+#info-numbers h3 {
+    font-size: 3em;
+}
+
+@media (min-width: 768px) {
+    #info-content {
+        padding: 3.5em;
+    }
+}
+
+/* FOOTER TOP */
+#footer {
+    padding: 3em 2em;
+}
+
+#footer-top {
+    margin-bottom: 2em;
+}
+
+#footer-top,
+#footer-top i {
+    color: #fff;
+}
+
+#social-icons {
+    text-align: right;
+}
+
+#social-icons i {
+    margin-right: 1em;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+#social-icons i:hover {
+    color: #7a7a7a;
+}
+
+/* FOOTER DETAILS */
+#footer-details {
+    margin-bottom: 3em;
+}
+
+#news-container,
+#contact-container,
+#links-container {
+    padding: 0;
+    border: 0;
+    margin-bottom: 2em;
+}
+
+#footer-details h4 {
+   color: #fff;
+   margin-bottom: 1.5em;
+}
+
+#news-container input {
+    border-radius: 0;
+    border: none;
+}
+
+#links-container li {
+    margin-bottom: 0.6em;
+}
+
+#links-container a {
+    text-decoration: none;
+}
+
+#links-container a:hover {
+    color: #fff;
+}
+
+/* FOOTER BOTTOM */
+#footer-bottom {
+    border-top: 1px solid #7a7a7a;
+    padding-top: 2em;
+}
+
+#footer-bottom i {
+    color: #e61e10;
+    margin-left: 0.3em;
+}
+
+@media (min-width: 768px) {
+    #news-container {
+        padding-right: 2em;
+    }
+
+    #links-container {
+        padding-left: 2em;
+    }
+    #contact-container {
+        padding-left: 2em;
+        border-left: 1px solid #7a7a7a;
+        border-right: 1px solid #7a7a7a;
+    }
+}

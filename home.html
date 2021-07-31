@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=
+        , initial-scale=1.0">
+        <title>Isaias's Website</title>
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="img/favicon_isaias.png" type="image/x-icon">
+        <!-- Google fonts -Lato -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+        <!-- CSS Bootstrap - site Google Bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <!-- Bootstrap Icons - (https://icons.getbootstrap.com/#install) -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+        <!-- CSS do projeto (O CSS do projeto  SEMPRE tem que ficar após o CSS do bootstrap, sempre!)-->
+        <link rel="stylesheet" href="estilos/styles.css">
+        <!-- JavaScript Bootstrap - site Google Bootstrap -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    </head>
+    <body>
+        <!-- NAVBAR -->
+        <!--A tag 'nav' representa uma barra de navegação, o 'navbar' é a classe do bootstrap, o 'navbar-expand-lg' deixa a barra de navegação expandida quando grande é hamburguer quando pequena, o 'fixed-top' é para fixar a barra no topo e o 'bg-primary-color' (nossa classe) é a classe de cor de fundo -->
+        <nav class="navbar navbar-expand-lg fixed-top bg-primary-color" id="navbar">
+            <div class="container py-3"> <!--O 'conteiner' é uma classe Bootstrap que limita largura e o 'py-3' é um pedding em cima e em baixo no eixo y-->
+                <a href="#" class="navbar-brand primary-color"> <!--Essa classe indica a marca do  site-->
+                    <img src="img/isaias-cm.png" alt="Foto Isaias">
+                    <span>Web Developer</span>
+                </a>
+                <button 
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse" 
+                data-bs-target="#navbar-items"
+                aria-controls="navbar-items"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+                >
+                <i class="bi bi-list"></i> <!--Icone de hamburguer para mobile-->
+                </button> <!--Com excesão do 'type' os demais são atributos do Bootstrap-->
+                <div class="collapse navbar-collapse" id="navbar-items"> <!-- A id 'navbar-items' tem o mesmo nome do 'area-controls' do botão, pois que dizer que o botão vai controlar esse elemento-->
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0"> <!--O 'me-auto' é a margem automatica, o 'mb-2' é a margem bottom 2 (relativo a fonte da página) no mobile e o 'mb-lg-0' é em telas grandes -->
+                        <li class="nav-item">
+                            <a href="#" class="nav-link active primary-color" aria-current="page">Home</a><!--O 'nav-link' e clase de link ,o 'active' dá um estilo extra no link ativo e o 'aria-current' é somante para pagina ativa -->
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link primary-color" >Projetos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link primary-color">Sobre</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link primary-color">Contato</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- SLIDER -->
+        <div class="container" id="slider-container"> <!--O 'container' é uma classe   do Bootstrap que limita o espaço-->
+            <div class="carousel slide" id="slider" data-bs-ride = "carousel">  
+                <div class="carousel-indicators"> <!--Elemento que fica em baixo dos sliders indicando a posição-->
+                    <button 
+                        type="button"
+                        class="active"
+                        data-bs-target="#slider"
+                        data-bs-slide-to="0"
+                        aria-current="true"
+                        aria-label="Slide 1"
+                    ></button><!--O 'data-bs-target="#slider"' é o slider principal e o 'data-bs-slide-to="0" é para qual slide vai ao clicar'-->
+                    <button 
+                        type="button"
+                        data-bs-target="#slider"
+                        data-bs-slide-to="1"
+                        aria-label="Slide 2"
+                    ></button> <!--Nos sliders que não estão ativos, pode ter menos parâmetros como esse (sem:'aria-current="true"'' e o 'class="active"')-->
+                    <button 
+                        type="button"
+                        data-bs-target="#slider"
+                        data-bs-slide-to="2"
+                        aria-label="Slide 3"
+                    ></button>
+                </div>
+                <div class="carousel-inner"> <!--Conteúdo interno (imagens)-->
+                    <div class="carousel-item active"> <!--Itens do carrossel-->
+                        <img src="img/site-irina.jpeg" alt="Site Irina Blok" class="d-block w-100"> <!--O 'd-block' é display = block e o 'w-100' largura total-->
+                        <div class="carousel-caption">
+                            <h5>Site Irina Blok</h5>
+                            <a href="#" class="btn btn-dark">Ver Projeto</a><!--O 'btn btn-dark' é uma classe do Bootstrap que cria botões-->
+                        </div>
+                    </div>
+                    <div class="carousel-item"> <!--Itens do carrossel-->
+                        <img src="img/site-construtora.jpeg" alt="Construtora de casas planejadas" class="d-block w-100"> <!--O 'd-block' é display = block e o 'w-100' largura total-->
+                        <div class="carousel-caption">
+                            <h5>Construtora de casas planejadas</h5>
+                            <a href="#" class="btn btn-dark">Ver Projeto </a>
+                        </div>
+                    </div>
+                    <div class="carousel-item"> <!--Itens do carrossel-->
+                        <img src="img/Mysite.jpeg" alt="Site Pessoal" class="d-block w-100"> <!--O 'd-block' é display = block e o 'w-100' largura total-->
+                        <div class="carousel-caption">
+                            <h5>Site Pessoal</h5>
+                            <a href="#" class="btn btn-dark">Ver Projeto</a>
+                        </div>
+                    </div>
+                </div>
+                <button 
+                    class="carousel-control-prev" 
+                    type="button" 
+                    data-bs-target="#slider"
+                    data-bs-slide="prev"> <!--Botões laterais do slide-->
+                    <i class="bi bi-chevron-compact-left"></i> <!--Icone de botões laterais do BootStrap-->
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button 
+                    class="carousel-control-next" 
+                    type="button" 
+                    data-bs-target="#slider"
+                    data-bs-slide="next"> <!--Botões laterais do slide-->
+                    <i class="bi bi-chevron-compact-right"></i> <!--Icone de botões laterais do BootStrap-->
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+            <!-- MINI BANNERS -->
+            <div class="col-12 col-md-10 offset-md-1" id="mini-banners"> <!--O 'col-12' significa 12 colunas no mobile, o 'col-md-10' é 1o colunas no desktop e o 'offset-md-1' é uma a esquerda para não ficar torto--> 
+                <div class="row"> <!--A classe 'row' serve para colocarmos layout em linha, ou seja, nesse caso é 12 colunas em uma linha-->
+                    <div class="col-12 col-md-4"> <!--Vai ocupar 12 colunas no mobile e 4 colunas no desktop, assim terá 3 mini banners por linha-->
+                        <div class="card text-center"> <!--o 'card' é um componete do Bootstrap e o 'text-center vai alinhar o texto no centro' -->
+                            <i class="bi bi-code-slash primary-color"></i> <!--Iconi superior-->
+                            <div class="card-body"> <!--Corpo do card-->
+                                <h5 class="card-title primary-color"> <!--Titulo do card--></h5>
+                                <img src="img/logo-html.png" alt="Logo HTML5"><br><br>
+                                <p class="card-text secondary-color"> <!--Descrição do card-->
+                                Conteúdos codificados e totalmente atualizados com a versão mais nova que é o <strong>HTML5</strong>.</p><br>
+                                <a href="#" target="_blank" rel="external" class="btn btn-dark">Saber mais</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4"> <!--Vai ocupar 12 colunas no mobile e 4 colunas no desktop, assim terá 3 mini banners por linha-->
+                        <div class="card text-center"> <!--o 'card' é um componete do Bootstrap e o 'text-center vai alinhar o texto no centro' -->
+                            <i class="bi bi-stack primary-color"></i> <!--Iconi superior-->
+                            <div class="card-body"> <!--Corpo do card-->
+                                <h5 class="card-title primary-color"> <!--Titulo do card--></h5>
+                                <img src="img/logo-css3.png" alt="Logo CSS3"><br><br>
+                                <p class="card-text secondary-color"> <!--Descrição do card-->
+                                Estilos personalizados conforme as nessecidades desejadas, tanto no <strong>CSS3</strong> quanto no Bootstrap.</p>
+                                <a href="#" target="_blank" rel="external" class="btn btn-dark">Saber mais</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4"> <!--Vai ocupar 12 colunas no mobile e 4 colunas no desktop, assim terá 3 mini banners por linha-->
+                        <div class="card text-center"> <!--o 'card' é um componete do Bootstrap e o 'text-center vai alinhar o texto no centro' -->
+                            <i class="bi bi-braces primary-color"></i> <!--Iconi superior-->
+                            <div class="card-body"> <!--Corpo do card-->
+                                <h5 class="card-title primary-color"> <!--Titulo do card--></h5>
+                                <img src="img/logo-js.png" alt="Logo JavaScript">
+                                <p class="card-text secondary-color"> <!--Descrição do card-->
+                                Com a interação de cada usuário através do <strong>JavaScript</strong> podemos assim melhorar a experiência do mesmo.</p>
+                                <a href="#" target="_blank" rel="external" class="btn btn-dark">Saber mais</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4"> <!--Vai ocupar 12 colunas no mobile e 4 colunas no desktop, assim terá 3 mini banners por linha-->
+                        <div class="card text-center"> <!--o 'card' é um componete do Bootstrap e o 'text-center vai alinhar o texto no centro' -->
+                            <i class="bi bi-bootstrap primary-color"></i> <!--Iconi superior-->
+                            <div class="card-body"> <!--Corpo do card-->
+                                <h5 class="card-title primary-color"> <!--Titulo do card--></h5>
+                                <img src="img/bootstrap-5.png" alt="Logo Bootstrap">
+                                <p class="card-text secondary-color"> <!--Descrição do card-->
+                                Ultilizando os novos recursos da versão do <strong>Bootstrap 5</strong>, otimizando a estrutura do projeto inclusive a biblioteca de íconis.</p>
+                                <a href="#" target="_blank" rel="external" class="btn btn-dark">Saber mais</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4"> <!--Vai ocupar 12 colunas no mobile e 4 colunas no desktop, assim terá 3 mini banners por linha-->
+                        <div class="card text-center"> <!--o 'card' é um componete do Bootstrap e o 'text-center vai alinhar o texto no centro' -->
+                            <i class="bi bi-diagram-3 primary-color"></i> <!--Iconi superior-->
+                            <div class="card-body"> <!--Corpo do card-->
+                                <h5 class="card-title primary-color"> <!--Titulo do card--></h5>
+                                <img src="img/logo-mysql.png" alt="Logo MySql"><br><br>
+                                <p class="card-text secondary-color"> <!--Descrição do card-->
+                                Conexão direta com o banco de dados <strong>MySql</strong> salvando cada dado fornecido pelo do usuário.</p><br>
+                                <a href="#" target="_blank" rel="external" class="btn btn-dark">Saber mais</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4"> <!--Vai ocupar 12 colunas no mobile e 4 colunas no desktop, assim terá 3 mini banners por linha-->
+                        <div class="card text-center"> <!--o 'card' é um componete do Bootstrap e o 'text-center vai alinhar o texto no centro' -->
+                            <i class="bi bi-github primary-color"></i> <!--Iconi superior-->
+                            <div class="card-body"> <!--Corpo do card-->
+                                <h5 class="card-title primary-color"> <!--Titulo do card--></h5>
+                                <img src="img/logo-github.png" alt="Logo GitHub">
+                                <p class="card-text secondary-color"> <!--Descrição do card-->
+                                Todo desenvolvimento e codificações salvas a cada modificações no <strong>GitHub</strong> mantendo o repositório sempre atualizado .</p>
+                                <a href="#" target="_blank" rel="external" class="btn btn-dark">Saber mais</a>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </div>  
+        </div>
+        <!-- DESTAQUES -->
+        <div class="container" id="featured-container">
+            <div class="col-12">
+                <h2 class="title primary-color">Outros Projetos</h2>
+                <p class="subtitle secondary-color">Conheça outros projetos</p>
+            </div>
+            <div class="col-12" id="featured-images">
+                <div class="row g-4"> <!--O 'g-4' é um espaçamento entre as colunas, para separar as imagens(do Bootstrap)-->
+                    <div class="col-12 col-md-4"> <!-- O 'col-12' é 12 colunas no mobile e o 'col-md-4' é 4 colunas em dispositivos maiores-->
+                        <img src="img/verificar-idade.jpeg" alt="Verificador de idade" class="img-fluid"> <!--A classe 'img-fluid' ocupa toda área disponível na div-->
+                        <div class="banner-content">
+                            <p class="secondary-color">Humor</p>
+                            <head>Site Verificador de Idade</head>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4"> <!-- O 'col-12' é 12 colunas no mobile e o 'col-md-4' é 4 colunas em dispositivos maiores-->
+                        <img src="img/media-numeros.jpeg" alt="Média de números" class="img-fluid"> <!--A classe 'img-fluid' ocupa toda área disponível na div-->
+                        <div class="banner-content">
+                            <p class="secondary-color">Média de números</p>
+                            <head>Site calculo de média de números</head>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4"> <!-- O 'col-12' é 12 colunas no mobile e o 'col-md-4' é 4 colunas em dispositivos maiores-->
+                        <img src="img/arte-css.jpeg" alt="Arte com CSS3" class="img-fluid"> <!--A classe 'img-fluid' ocupa toda área disponível na div-->
+                        <div class="banner-content">
+                            <p class="secondary-color">Arte Digital</p>
+                            <head>Arte com CSS3 puro</head>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4"> <!-- O 'col-12' é 12 colunas no mobile e o 'col-md-4' é 4 colunas em dispositivos maiores-->
+                        <img src="img/contando.jpeg" alt="Contando" class="img-fluid"> <!--A classe 'img-fluid' ocupa toda área disponível na div-->
+                        <div class="banner-content">
+                            <p class="secondary-color">Caulculos</p>
+                            <head>Site Contando com intervalos</head>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4"> <!-- O 'col-12' é 12 colunas no mobile e o 'col-md-4' é 4 colunas em dispositivos maiores-->
+                        <img src="img/data-hora.jpeg" alt="Data e hora" class="img-fluid"> <!--A classe 'img-fluid' ocupa toda área disponível na div-->
+                        <div class="banner-content">
+                            <p class="secondary-color">Atualização</p>
+                            <head>Site Data e hora Atual</head>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4"> <!-- O 'col-12' é 12 colunas no mobile e o 'col-md-4' é 4 colunas em dispositivos maiores-->
+                        <img src="img/formulario.jpeg" alt="Formulário de cadastro" class="img-fluid"> <!--A classe 'img-fluid' ocupa toda área disponível na div-->
+                        <div class="banner-content">
+                            <p class="secondary-color">Cadastro</p>
+                            <head>Formulário de Cadsatro</head>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- INFORMAÇÕES -->
+        <div class="container" id="info-container">
+            <div class="col-12">
+                <h2 class="title primary-color">Detalhes</h2>
+                <p class="subtitle secondary-color">Conheça mais sobre minhas experiências</p>
+            </div>
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-12 col-md-5" id="info-banner">
+                        <img 
+                        src="img/thisSite.PNG" 
+                        alt="Este site"
+                        class="img-fluid">
+                    </div>
+                    <div class="col-12 col-md-7 bg-secondary-color" id="info-content">
+                        <div class="row">
+                            <div class="col-12">
+                                <h2 class="title primary-color">Números que fazem a diferença</h2>
+                                <p class="subtitle secondary-color">Todos os meus projetos em números</p>
+                            </div>
+                            <div class="col-12" id="info-numbers">
+                                <div class="row">
+                                    <div class="col-4"> <!--Quando não é colocado o 'md' mais o número de colunas, quer dizer que será assim tanto no mobile quando no desktop-->
+                                        <h3 class="primary-color">20</h3>
+                                        <p class="secondary-color">Anos no mercado de trabalho</p>
+                                    </div><div class="col-4"> 
+                                        <h3 class="primary-color">32</h3>
+                                        <p class="secondary-color">Projetos no GitHub</p>
+                                    </div>
+                                    <div class="col-4"> 
+                                        <h3 class="primary-color">6</h3>
+                                        <p class="secondary-color">Tecnologias de desenvolvimentos</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <a href="#" class="btn btn-dark">Saber Mais</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- FOOTER -->
+        <footer class="container-fluid bg-dark-color" id="footer">
+            <div class="container"> <!--Um container dentro do outro container-fluid é para vazar todo o conteúdo, porém, permanecer com o limite de todo container da página-->
+                <div class="row">
+                    <!-- FOOTER TOP -->
+                    <div class="col-12" id="footer-top">
+                        <div class="row justify-content-between"> <!-- Esta segunda classe é para deixar cada item no seu canto -->
+                            <div class="col-4"><h2>Wed Developer</h2></div>
+                            <div class="col-4" id="social-icons">
+                                <i class="bi bi-linkedin"></i>
+                                <i class="bi bi-github"></i>
+                                <i class="bi bi-facebook"></i>
+                                <i class="bi bi-instagram"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- FOOTER DETAILS -->
+                    <div class="col-12" id="footer-details">
+                        <div class="row">
+                            <div class="col-12 col-md-4" id="news-container">
+                                <h4>Receba atualizações de projetos</h4>
+                                <p class="secondary-color">Inscreva-se para receber em primeira mão</p>
+                                <form>
+                                    <div class="mb-3">
+                                        <input type="email" class="form-control" placeholder="Digite seu email">
+                                    </div>
+                                    <button class="btn btn-dark" type="submit">Inscrever</button>
+                                </form>
+                            </div>
+                            <div class="col-12 col-md-4" id="contact-container">
+                                <h4>Formas de contato</h4>
+                                <p class="secondary-color"><i class="bi bi-whatsapp"></i> 12 9 8104-5791</p>
+                                <p class="secondary-color"><i class="bi bi-telegram"></i> 12 9 8104-5791</p>
+                                
+                                <p class="secondary-color"><i class="bi bi-envelope"></i> contato@estacaosantana.com.br</p>
+                                <p class="secondary-color"><i class="bi bi-envelope"></i> isaiassantanadossantos@hotmail.com</p>
+                                <p class="secondary-color"><i class="bi bi-telephone"></i> (12) 3905-2080</p>
+                            </div>
+                            <div class="col-12 col-md-4" id="links-container">
+                                <div class="row">
+                                    <h4>Você deve esta procurando por:</h4>
+                                    <div class="col-6">
+                                        <ul class="list-unstyled"> <!--Deixa a lista sem imagens-->
+                                            <li><a href="#" class="secondary-color">Projetos</a></li>
+                                            <li><a href="#" class="secondary-color">Sobre</a></li>
+                                            <li><a href="#" class="secondary-color">Contatos</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-6">
+                                        <ul class="list-unstyled"> <!--Deixa a lista sem imagens-->
+                                            <li><a href="#" class="secondary-color">Contratar</a></li>
+                                            <li><a href="#" class="secondary-color">Orçamento</a></li>
+                                            <li><a href="#" class="secondary-color">Meu CV</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--FOOTER BOTTOM -->
+                    <div class="col-12" id="footer-bottom">
+                        <div class="row justify-content-between">
+                            <div class="col-12 col-md-3">
+                                <p class="secondary-color">Web Developer &copy; 2021</p>
+                            </div>
+                            <div class="col-12 col-md-3">
+                                <p class="secondary-color">Realizo seu projeto do <i class="bi bi-heart"></i></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
+ 
