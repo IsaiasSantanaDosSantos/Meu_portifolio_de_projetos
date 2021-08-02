@@ -25,6 +25,7 @@
     color: #7a7a7a;
 }
 
+
 /*NAVBAR*/
 #navbar {
     border-bottom: 1px solid #7a7a7a; /*Borda inferior*/
@@ -68,7 +69,7 @@
 
 /* SLIDER */
 #slider {
-    margin-top: 8em;
+    margin-top: 9em;
     margin-bottom: 1em;
 }
 
@@ -227,7 +228,7 @@
 
 @media (min-width: 768px) {
     .title {
-        font-size: 2.4em;
+        font-size: 3em;
     }
 
     .title:before {
@@ -306,6 +307,15 @@
     margin-bottom: 2em;
 }
 
+#contact-container a {
+    text-decoration: none;
+    color: #7a7a7a;
+}
+
+#contact-container a:hover {
+    color: #fff;
+}
+
 #footer-details h4 {
    color: #fff;
    margin-bottom: 1.5em;
@@ -352,4 +362,120 @@
         border-left: 1px solid #7a7a7a;
         border-right: 1px solid #7a7a7a;
     }
+}
+
+/* PÁGINA PROJETOS */
+
+/* APRESENTAÇÃO */
+
+#apresentacao {
+    display: flex;
+    margin-top: 11em;
+    margin-bottom: 1em;
+}
+ #resume {
+     text-align: justify;
+ }
+
+ #resume p {
+     text-indent: 3em;
+ }
+
+ #apresentacao {
+     border-bottom: 1px solid #7a7a7a;
+ }
+
+ #apresentacao img {
+    padding: 1.5em;
+    width: 100%;
+    height: 100%;
+}
+
+ @media (min-width:768px) {
+    #apresentacao img {
+        padding: 2.5em;
+        width: 400px;
+        height: 500px;
+        margin: auto;
+    }
+ }
+
+
+/* PROJETOS */
+
+#projetos-container {
+    margin-top: 4em;
+    margin-bottom: 1em;
+}
+
+#foto-projeto-principal {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2.5em;
+    margin-top: 1.5em;
+}
+
+#text-projetos p {
+    text-indent: 3em;
+}
+
+@media (min-width: 768px) {
+    #projetos-container {
+        margin-top: 9em;
+        margin-bottom: 1em;
+    }
+}
+
+/* DEMAIS PROJETOS */
+
+#outros-projetos {
+    margin-bottom: 2em;
+}
+
+#fotos-projetos {
+    margin-top: 2em;
+}
+
+#fotos-projetos img {
+    height: 100%;
+}
+
+#fotos-projetos .col-md-4 {
+    position: relative;
+    cursor: pointer;
+}
+
+#fotos-projetos .col-md-4:hover > .banner-content {
+   opacity: 0.9;
+}
+
+#fotos-projetos .banner-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 99%;
+    background-color: #fff;
+    display: flex; /*Para centralizar melhor os itens*/
+    justify-content: center; /*Esse parâmetro com o 'justify-content: center'juntamente com o 'display: flex;* centraliza o conteúdo desejado*/
+    align-items: center;
+    flex-direction: column; /*Layout colunas (Colocar um por baixo do outro)*/
+    opacity: 0.6;
+    transition: 0.5s; /* Tempode de modança*/
+}
+
+/* BOTÃO TODOS PROJETOS */
+
+#btn-tds-projetos {
+     margin: 1.5em auto 3em auto;
+     width: 50%;
+}
+
+#btn-tds-projetos a {
+    text-decoration: none;
+    color: #7a7a7a;
+}
+
+#btn-tds-projetos:hover {
+    box-shadow: #7a7a7a 2px 2px 4px;
 }
