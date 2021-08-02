@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width= 0
+    , initial-scale=1.0">
+    <title>Isaias's Website</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="img/favicon_isaias.png" type="image/x-icon">
+    <!-- Google fonts -Lato -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- CSS Bootstrap - site Google Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Bootstrap Icons - (https://icons.getbootstrap.com/#install) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <!-- CSS do projeto (O CSS do projeto  SEMPRE tem que ficar após o CSS do bootstrap, sempre!)-->
+    <link rel="stylesheet" href="estilos/styles.css">
+    <!-- JavaScript Bootstrap - site Google Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top bg-primary-color" id="navbar">
+        <div class="container py-3"> <!--O 'conteiner' é uma classe Bootstrap que limita largura e o 'py-3' é um pedding em cima e em baixo no eixo y-->
+            <a href="home.html" class="navbar-brand primary-color"> <!--Essa classe indica a marca do  site-->
+                <img src="img/isaias-cm.png" alt="Foto Isaias">
+                <span>Web Developer</span>
+            </a>
+            <button 
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse" 
+            data-bs-target="#navbar-items"
+            aria-controls="navbar-items"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+            >
+            <i class="bi bi-list"></i> <!--Icone de hamburguer para mobile-->
+            </button> <!--Com excesão do 'type' os demais são atributos do Bootstrap-->
+            <div class="collapse navbar-collapse" id="navbar-items"> <!-- A id 'navbar-items' tem o mesmo nome do 'area-controls' do botão, pois que dizer que o botão vai controlar esse elemento-->
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0"> <!--O 'me-auto' é a margem automatica, o 'mb-2' é a margem bottom 2 (relativo a fonte da página) no mobile e o 'mb-lg-0' é em telas grandes -->
+                    <li class="nav-item">
+                        <a href="home.html" class="nav-link  primary-color">Home</a><!--O 'nav-link' e clase de link ,o 'active' dá um estilo extra no link ativo e o 'aria-current' é somante para pagina ativa -->
+                    </li>
+                    <li class="nav-item">
+                        <a href="projetos.html" class="nav-link active primary-color" aria-current="page" >Projetos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="sobre.html" class="nav-link primary-color">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contato.html" class="nav-link primary-color">Contato</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <footer class="container-fluid bg-dark-color" id="footer">
+        <div class="container"> <!--Um container dentro do outro container-fluid é para vazar todo o conteúdo, porém, permanecer com o limite de todo container da página-->
+            <div class="row">
+                <!-- FOOTER TOP -->
+                <div class="col-12" id="footer-top">
+                    <div class="row justify-content-between"> <!-- Esta segunda classe é para deixar cada item no seu canto -->
+                        <div class="col-4"><h2>Wed Developer</h2></div>
+                        <div class="col-4" id="social-icons">
+                            <i class="bi bi-linkedin"></i>
+                            <i class="bi bi-github"></i>
+                            <i class="bi bi-facebook"></i>
+                            <i class="bi bi-instagram"></i>
+                        </div>
+                    </div>
+                </div>
+                <!-- FOOTER DETAILS -->
+                <div class="col-12" id="footer-details">
+                    <div class="row">
+                        <div class="col-12 col-md-4" id="news-container">
+                            <h4>Receba atualizações de projetos</h4>
+                            <p class="secondary-color">Inscreva-se para receber em primeira mão</p>
+                            <form>
+                                <div class="mb-3">
+                                    <input type="email" class="form-control" placeholder="Digite seu email">
+                                </div>
+                                <button class="btn btn-dark" type="submit">Inscrever</button>
+                            </form>
+                        </div>
+                        <div class="col-12 col-md-4" id="contact-container">
+                            <h4>Formas de contato</h4>
+                            <p class="secondary-color"><i class="bi bi-whatsapp"></i> 12 9 8104-5791</p>
+                            <p class="secondary-color"><i class="bi bi-telegram"></i> 12 9 8104-5791</p>
+                            
+                            <p class="secondary-color"><i class="bi bi-envelope"></i> contato@estacaosantana.com.br</p>
+                            <p class="secondary-color"><i class="bi bi-envelope"></i> isaiassantanadossantos@hotmail.com</p>
+                            <p class="secondary-color"><i class="bi bi-telephone"></i> (12) 3905-2080</p>
+                        </div>
+                        <div class="col-12 col-md-4" id="links-container">
+                            <div class="row">
+                                <h4>Você deve esta procurando por:</h4>
+                                <div class="col-6">
+                                    <ul class="list-unstyled"> <!--Deixa a lista sem imagens-->
+                                        <li><a href="#" class="secondary-color">Projetos</a></li>
+                                        <li><a href="#" class="secondary-color">Sobre</a></li>
+                                        <li><a href="#" class="secondary-color">Contatos</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-6">
+                                    <ul class="list-unstyled"> <!--Deixa a lista sem imagens-->
+                                        <li><a href="#" class="secondary-color">Contratar</a></li>
+                                        <li><a href="#" class="secondary-color">Orçamento</a></li>
+                                        <li><a href="#" class="secondary-color">Meu CV</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--FOOTER BOTTOM -->
+                <div class="col-12" id="footer-bottom">
+                    <div class="row justify-content-between">
+                        <div class="col-12 col-md-3">
+                            <p class="secondary-color">Web Developer &copy; 2021</p>
+                        </div>
+                        <div class="col-12 col-md-3">
+                            <p class="secondary-color">Realizo seu projeto do <i class="bi bi-heart"></i></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="javaScript/script.js"></script>
+</body>
+</html>

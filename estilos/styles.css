@@ -34,6 +34,9 @@
     color: #7a7a7a;
 }
 
+#navbar a span:hover {
+    color: #050505;
+}
 
 #navbar a.active { /*Bordar no link que tiver active*/
     border-bottom: 1px solid #050505; 
